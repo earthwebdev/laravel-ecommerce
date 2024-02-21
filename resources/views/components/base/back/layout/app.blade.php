@@ -72,7 +72,20 @@
             </div>
         </nav>
         <div class="mt-4"></div>
-        {{ $slot }}
+
+        <div class="container">
+            <div class="row">
+                @if(auth()->user()->is_admin)
+                <div class="col-md-3">
+                    <x-base.back.common.navbar/>
+                </div>
+                @endif
+                <div class="{{ auth()->user()->is_admin ? 'col-md-9':'col-md-12' }}">
+                    {{ $slot }}
+                </div>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
