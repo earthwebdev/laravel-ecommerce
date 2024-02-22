@@ -87,5 +87,6 @@
         </div>
 
     </div>
+    @yield('footer_scripts')
 </body>
 </html>
