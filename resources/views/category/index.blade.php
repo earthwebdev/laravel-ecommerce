@@ -26,7 +26,15 @@
                                 <img width="100" src="{{ asset('storage/images/categories/'.$category->image ) }}" alt="{{ $category->title }}" >
                                 @endif
                                 </td>
-                            <td class="text-center">Edit | Delete</td>
+                            <td class="text-center">
+                                <a class="btn btn-primary d-inline-block" href="{{ route('backend.category.edit', $category->id) }}" title="Edit Category">Edit</a>
+                                <form class="d-inline-block" action="{{ route('backend.category.destroy', $category->id) }}" method="POST">
+                                    @csrf
+                                    @method('delete')
+                                    <input class="btn btn-danger" type="submit" onclick="return confirm('Are you sure you want to delete this category?')" value="Delete">
+                                </form>
+
+                            </td>
                           </tr>
                         @empty
                         <tr>
@@ -43,6 +51,7 @@
 
 
 
+                  {{ $categories->links() }}
         </div>
     </div>
 </x-base.back.layout.app>
