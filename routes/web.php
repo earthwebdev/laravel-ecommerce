@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,4 +31,5 @@ Route::group([
     ],
     function () {
         Route::resource('category', CategoryController::class)->names('backend.category');
+        Route::resource('product', ProductController::class)->names('backend.product');
 });
