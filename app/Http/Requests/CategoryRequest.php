@@ -28,7 +28,7 @@ class CategoryRequest extends FormRequest
                 'slug'          => 'nullable|unique:categories,slug,'.$this->get('id'),
                 'description'   => 'required',
                 'status'        => 'required',
-                'image'         => 'nullable|mimes:png,jpg,gif',
+                'image'         => 'nullable|mimes:jpeg,png,jpg,gif',
             ];
         }
         else
@@ -38,7 +38,7 @@ class CategoryRequest extends FormRequest
                 'slug'          => 'nullable|unique:categories,slug',
                 'description'   => 'required',
                 'status'        => 'required',
-                'image'         => 'nullable|mimes:png,jpg,gif',
+                'image'         => 'nullable|mimes:jpeg,png,jpg,gif',
             ];
         }
 

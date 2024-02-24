@@ -20,7 +20,7 @@ class tinymceEditor extends Component
             "id"=> $id,
             "value"=> $value
         ];
-        //dd($this->tinymce_data['name']);
+        //dd($this->tinymce_data);
     }
 
     /**
