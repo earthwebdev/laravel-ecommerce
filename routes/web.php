@@ -2,9 +2,10 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\CategoryController;
-use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\SlideController;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,7 @@ Route::group([
         'middleware' => ['auth', 'isAdmin']
     ],
     function () {
+        Route::resource('user', UserController::class)->names('backend.user');
         Route::resource('slide', SlideController::class)->names('backend.slide');
         Route::resource('category', CategoryController::class)->names('backend.category');
         Route::resource('product', ProductController::class)->names('backend.product');
