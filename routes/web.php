@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\SlideController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,4 +37,6 @@ Route::group([
         Route::resource('slide', SlideController::class)->names('backend.slide');
         Route::resource('category', CategoryController::class)->names('backend.category');
         Route::resource('product', ProductController::class)->names('backend.product');
+        Route::resource('page', PageController::class)->names('backend.page');
+
 });
