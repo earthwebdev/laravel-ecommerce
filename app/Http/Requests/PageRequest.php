@@ -11,7 +11,7 @@ class PageRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,8 +21,25 @@ class PageRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            //
-        ];
+        if($this->get("id") != null)
+        {
+            return [
+                'title'         => 'required',
+                'slug'          => 'nullable|unique:pages,slug,'.$this->get('id'),
+                'description'   => 'required',
+                'status'        => 'required',
+                'image'         => 'nullable|mimes:jpeg,png,jpg,gif',
+            ];
+        }
+        else
+        {
+            return [
+                'title'         => 'required',
+                'slug'          => 'nullable|unique:pages,slug',
+                'description'   => 'required',
+                'status'        => 'required',
+                'image'         => 'nullable|mimes:jpeg,png,jpg,gif',
+            ];
+        }
     }
 }
