@@ -18,10 +18,10 @@ class SlideFactory extends Factory
     {
         return [
             'title'=> $this->faker->word(4),
-            'description' => $this->faker->sentence(1),
-            'image'=> $this->faker->imageUrl('public/storage/images/slides', 640, 480, null, false, false),
+            'description' => $this->faker->sentence(8),
+            'image'=> $this->faker->image('public/storage/images/slides', 1920, 1080, null, false, false),
             'status'    => $this->faker->randomElement(['active','inactive']),
-            'link_title'    => $this->faker->randomElement(['click','click here','Read More']),
+            //'link_title'    => $this->faker->randomElement(['click','click here','Read More']),
         ];
     }
 }
