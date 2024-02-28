@@ -4,12 +4,12 @@
 
     <x-base.front.home.slide-comp />
 
-    <div class="container">
+    <x-base.front.home.feature-category-comp />
 
-        <div class="row">
+    <x-base.front.home.feature-product-comp />
 
-        </div>
-    </div>
+    <x-base.front.home.recent-product-comp />
+
     <x-base.front.partial.footer />
     <x-slot:scripts>
     <script>
