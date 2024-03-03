@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class="container border-bottom mt-2"></div>
-    <div class="container mt-2 mb-2 align-self-center">
+    <div class="container mt-2 align-self-center">
         <div class="row">
             <div class="text-center">
                 Copyright © {{ $date }} All rights reserved
