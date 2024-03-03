@@ -9,6 +9,8 @@
     <x-base.front.home.feature-product-comp />
 
     <x-base.front.home.recent-product-comp />
+    <x-base.front.home.tag-line-comp />
+
 
     <x-base.front.partial.footer />
     <x-slot:scripts>
