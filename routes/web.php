@@ -26,6 +26,8 @@ use App\Http\Controllers\FrontController;
 
 Route::get("/", [FrontController::class, 'landingPage'])->name("landingPage");
 
+Route::get("/category/{slug}", [FrontController::class, 'categoryDetails'])->name("categoryPage");
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

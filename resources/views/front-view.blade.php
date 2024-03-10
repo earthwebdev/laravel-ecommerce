@@ -11,6 +11,7 @@
     <x-base.front.home.recent-product-comp />
     <x-base.front.home.tag-line-comp />
 
+    <x-base.front.home.testimonials-comp />
 
     <x-base.front.partial.footer />
     <x-slot:scripts>
