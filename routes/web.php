@@ -27,6 +27,7 @@ use App\Http\Controllers\FrontController;
 Route::get("/", [FrontController::class, 'landingPage'])->name("landingPage");
 
 Route::get("/category/{slug}", [FrontController::class, 'categoryDetails'])->name("categoryPage");
+Route::get("/product/{slug}", [FrontController::class, 'productDetails'])->name("productPage");
 
 Auth::routes();
 
